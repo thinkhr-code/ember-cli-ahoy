@@ -23,7 +23,13 @@ import Component from 'ember-component';
 import service from 'ember-service/inject';
 
 export default Component.extend({
-  ahoy: service()
+  ahoy: service(),
+
+  didInsertElement() {
+    this.get('ahoy').trackView({
+      url: 'foo-bar'
+    });
+  }
 });
 ```
 
