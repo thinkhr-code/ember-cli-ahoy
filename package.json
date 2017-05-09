@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-ahoy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Ahoy.js shim for Ember",
   "keywords": [
     "ember-addon"
@@ -13,14 +13,9 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
-  },
-  "repository": "https://github.com/MammothHR/ember-cli-ahoy",
-  "scripts": {
-    "build": "ember build",
-    "start": "ember server",
     "test": "ember try:each"
   },
+  "repository": "https://github.com/MammothHR/ember-cli-ahoy",
   "dependencies": {
     "ahoy.js": "^0.2.1"
   },
