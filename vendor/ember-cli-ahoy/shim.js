@@ -1,3 +1,4 @@
+/* eslint-env node */
 /* globals ahoy */
 
 define('ahoy', [], function() {
