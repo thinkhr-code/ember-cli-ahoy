@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-ahoy",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Ahoy.js shim for Ember",
   "keywords": [
     "ember-addon"
