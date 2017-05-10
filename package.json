@@ -21,6 +21,8 @@
     "ahoy.js": "^0.2.1"
   },
   "devDependencies": {
+    "broccoli-funnel": "",
+    "broccoli-merge-trees": "0.2.1",
     "babel-eslint": "7.2.3",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
