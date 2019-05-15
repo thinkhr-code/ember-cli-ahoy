@@ -4,6 +4,7 @@
 var Funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
 var path = require('path');
+var map = require('broccoli-stew').map;
 
 module.exports = {
   name: 'ember-cli-ahoy',
@@ -25,19 +26,15 @@ module.exports = {
     });
   },
 
-  treeForVendor: function(vendorTree) {
-    var trees = [];
+  treeForVendor: function (defaultTree) {
     var ahoyPath = path.dirname(require.resolve('ahoy.js'));
-
-    if (vendorTree) {
-      trees.push(vendorTree);
-    }
-
-    trees.push(new Funnel(ahoyPath, {
+    var browserVendorLib = new Funnel(ahoyPath, {
       destDir: 'ahoy.js',
       include: [new RegExp(/\.js$/)]
-    }));
+    });
 
-    return mergeTrees(trees);
+    browserVendorLib = map(browserVendorLib, (content) => `if (typeof FastBoot === 'undefined') { ${content} }`);
+
+    return new mergeTrees([defaultTree, browserVendorLib]);
   }
 };

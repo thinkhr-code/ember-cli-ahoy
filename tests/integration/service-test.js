@@ -1,17 +1,22 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('test-component', 'as a service', {
-  unit: true,
-  needs: ['service:ahoy']
-});
+module('as a service', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it is injectable', function(assert) {
-  assert.expect(3);
+  test('it is injectable', async function (assert) {
+    assert.expect(3);
 
-  const subject = this.subject();
-  const service = subject.get('ahoy');
+    await render(hbs`
+      {{ test-component }}
+    `);
 
-  assert.ok(service, 'It exists');
-  assert.ok(service.track, 'track exists');
-  assert.ok(service.trackView, 'trackView exists');
+    const service = this.owner.lookup('service:ahoy');
+
+    assert.ok(service, 'It exists');
+    assert.ok(service.track, 'track exists');
+    assert.ok(service.trackView, 'trackView exists');
+  });
 });
