@@ -115,11 +115,10 @@ after@0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.1.tgz#ab5d4fb883f596816d3515f8f791c0af486dd627"
 
-ahoy.js@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ahoy.js/-/ahoy.js-0.2.1.tgz#bd155194cf837dab2d4bef553912d18621a0553b"
-  dependencies:
-    jquery ">1.9.0"
+ahoy.js@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ahoy.js/-/ahoy.js-0.4.0.tgz#92c0247866b167015e1fdd0bc9cda8b3a61fadbe"
+  integrity sha512-jq4aidHv8QWvZzN7YYnkQ1JgO6RyDBNrobcimJRtlfKiIP8B9ZaeMOIP4qieVrNawgI6JXpxvYMllfRb+sWZew==
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -3225,7 +3224,7 @@ istextorbinary@2.1.0:
     editions "^1.1.1"
     textextensions "1 || 2"
 
-jquery@>1.9.0, jquery@^3.1.1:
+jquery@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
